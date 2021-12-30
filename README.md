@@ -1,17 +1,18 @@
 # Description
 
-Classic to do list application to browse on a list of existing tasks and handle create, read, update and delete operation on those tasks. The purpose of this application is to implement the essential building blocks of a CRUD web application using PostgreSQL and React. 
+Classic to do list application to browse on a list of existing tasks and handle create, read, update and delete operation on those tasks. The purpose of this application is to implement the essential building blocks of a CRUD web application using PostgreSQL and React.
 
 # Design
 
 ## Tech Stack
-Next.js, React, Material-UI, node-postgres, Typescript with ES7 JavaScript syntax. 
+
+Next.js, React, Material-UI, node-postgres, Typescript with ES7 JavaScript syntax.
 
 ## Data
 
 The database contains a single table of 'tasks' that contains all of the tasks that an user has created. The schema of the tasks table is as follows:
 
-- ID: a unique serial integer that serves as the primary key and is automatically generated on each create request. 
+- ID: a unique serial integer that serves as the primary key and is automatically generated on each create request.
 - Title: the name that identifies the tasks to the user, a varchar(64)
 - Description: additional text that clarifies the details of the task, a varchar(256)
 - Creation Time: the date when the task was created by the user
@@ -21,13 +22,13 @@ The database contains a single table of 'tasks' that contains all of the tasks t
 In order to perform CRUD operations of the database, we require these 5 API methods:
 
 - /api/tasks
-    - POST: lists all existing tasks in the database in a single page. In larger databases, it may support search, sorting, filtering, pagination and lazy loading.
+  - POST: lists all existing tasks in the database in a single page. In larger databases, it may support search, sorting, filtering, pagination and lazy loading.
 - /api/new
-    - POST: inserts a new task into the tasks database
+  - POST: inserts a new task into the tasks database
 - /api/tasks/\[task_id\]
-    - GET: reads the data for the task in the database and returns it
-    - PUT: updates the data of the task with a new title and description
-    - DELETE: deletes the task from the database
+  - GET: reads the data for the task in the database and returns it
+  - PUT: updates the data of the task with a new title and description
+  - DELETE: deletes the task from the database
 
 ## Interface
 
@@ -45,6 +46,7 @@ In order to perform CRUD operations of the database, we require these 5 API meth
 - CreateTask.tsx: form to create a new task
 
 # Relevant sources
+
 [Video: Nextjs PostgreSQL Typescript CRUD (REST API & Frontend)](https://www.youtube.com/watch?v=fle43mKDLSI)
 [Video: React, Node y PostgreSQL (PERN Stack) con Material UI](https://www.youtube.com/watch?v=_zGL_MU29zs)
 

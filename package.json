@@ -6,7 +6,7 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "fix": "next lint --fix"
+    "prettify": "npx prettier --write ."
   },
   "dependencies": {
     "@mantine/core": "^3.4.3",
@@ -33,6 +33,7 @@
     "eslint-plugin-node": "^11.1.0",
     "eslint-plugin-promise": "^5.2.0",
     "eslint-plugin-react": "^7.28.0",
+    "prettier": "2.5.1",
     "typescript": "4.5.4"
   }
 }
