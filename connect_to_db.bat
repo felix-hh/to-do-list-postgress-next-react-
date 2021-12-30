@@ -1,0 +1,1 @@
+psql -U demo_to_do_list_user demo_to_do_list
