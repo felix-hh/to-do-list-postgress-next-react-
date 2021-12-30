@@ -1,9 +1,9 @@
 const Index = () => {
-  return (
-    <>
+    return (
+        <>
     Hello world!
-    </>
-  )
+        </>
+    )
 }
 
 export default Index
