@@ -4,7 +4,7 @@ Classic to do list application to browse on a list of existing tasks and handle 
 
 # Design
 
-## TECH STACK
+## Tech Stack
 Next.js, React, Material-UI, node-postgres, Typescript with ES7 JavaScript syntax. 
 
 ## Data
