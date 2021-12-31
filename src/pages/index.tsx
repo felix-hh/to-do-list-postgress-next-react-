@@ -5,8 +5,11 @@ const Index = () => {
 
   return (
     <>
-      Hello world! List of tasks
-      <button onClick={() => router.push('/new')}>New task</button>
+      <h1>Hello world!</h1>
+      <div>List of tasks</div>
+      <div>
+        <button onClick={() => router.push('/new')}>New task</button>
+      </div>
     </>
   )
 }
