@@ -12,6 +12,7 @@
     "@mantine/core": "^3.4.3",
     "@mantine/hooks": "^3.4.3",
     "@mantine/modals": "^3.4.3",
+    "@radix-ui/react-icons": "^1.0.3",
     "@types/luxon": "^2.0.8",
     "@types/pg": "^8.6.3",
     "luxon": "^2.2.0",

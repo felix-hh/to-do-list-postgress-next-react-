@@ -1,16 +1,28 @@
-import { useRouter } from 'next/router'
+import Layout from '../components/Layout'
+import { Title } from '@mantine/core'
+import TasksList from '../components/TasksList'
+import { GetServerSideProps } from 'next'
+import TaskData from '../interfaces/taskData'
+import { rootURL } from '../utils/constants'
 
-const Index = () => {
-  const router = useRouter()
+interface IndexProps {
+  tasks: TaskData[]
+}
 
+export const getServerSideProps: GetServerSideProps = async () => {
+  const result = await fetch(rootURL + '/api/tasks')
+  const tasks = await result.json()
+  const output = { props: { tasks } }
+  console.log(output)
+  return output
+}
+
+const Index = ({ tasks: data }: IndexProps) => {
   return (
-    <>
-      <h1>Hello world!</h1>
-      <div>List of tasks</div>
-      <div>
-        <button onClick={() => router.push('/new')}>New task</button>
-      </div>
-    </>
+    <Layout>
+      <Title>List of tasks</Title>
+      <TasksList data={data}></TasksList>
+    </Layout>
   )
 }
 
