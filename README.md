@@ -1,4 +1,8 @@
 # Description
+Basic CRUD application to keep track of different tasks created with PostgreSQL.
+
+![ListTasks](screenshots/ListTasks.png)
+
 
 Classic to do list application to browse on a list of existing tasks and handle create, read, update and delete operation on those tasks. The purpose of this application is to implement the essential building blocks of a CRUD web application using PostgreSQL and React.
 
@@ -6,7 +10,7 @@ Classic to do list application to browse on a list of existing tasks and handle 
 
 ## Tech Stack
 
-Main technologies: Next.js, React, Material-UI, node-postgres, Typescript with ES7 syntax.
+Main technologies: Next.js, React, Mantine, node-postgres, Typescript with ES7 syntax.
 
 Using the Luxon library for DateTimes, Modulz for icons, eslint for linting and prettier for code style.
 
@@ -67,3 +71,11 @@ yarn dev
 ```
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+
+## More Screenshots
+
+![](screenshots/CreateTask.png)
+
+![](screenshots/TaskDetails.png)
+
+![](screenshots/UpdateTask.png)
