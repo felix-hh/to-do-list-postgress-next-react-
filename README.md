@@ -28,7 +28,7 @@ The database contains a single table of 'tasks' that contains all of the tasks t
 In order to perform CRUD operations of the database, we require these 5 API methods:
 
 - /api/tasks
-  - POST: lists all existing tasks in the database in a single page. In larger databases, it may support search, sorting, filtering, pagination and lazy loading.
+  - GET: lists all existing tasks in the database in a single page. In larger databases, it may support search, sorting, filtering, pagination and lazy loading.
 - /api/new
   - POST: inserts a new task into the tasks database
 - /api/tasks/\[task_id\]
