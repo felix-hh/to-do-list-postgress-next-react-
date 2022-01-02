@@ -1,3 +1,4 @@
+import TaskData from 'src/interfaces/TaskData'
 import { NextApiRequest, NextApiResponse } from 'next/types'
 import connection from 'src/utils/database'
 
@@ -17,10 +18,13 @@ export default async (req: NextApiRequest, res: NextApiResponse) => {
 
       case 'PUT':
         const { task_title, task_description } = req.body
+        console.log(req.body)
+        console.log(req.body.task_title)
 
         query =
           'UPDATE tasks SET task_title=$1, task_description=$2 WHERE task_id=$3 RETURNING *'
         values = [task_title, task_description, task_id]
+        console.log(values)
         task_data = await connection.query(query, values)
 
         if (task_data.rowCount === 0) {

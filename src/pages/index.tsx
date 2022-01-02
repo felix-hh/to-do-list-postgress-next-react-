@@ -2,7 +2,7 @@ import Layout from '../components/Layout'
 import { Title } from '@mantine/core'
 import TasksList from '../components/TasksList'
 import { GetServerSideProps } from 'next'
-import TaskData from '../interfaces/taskData'
+import TaskData from '../interfaces/TaskData'
 import { rootURL } from '../utils/constants'
 
 interface IndexProps {
@@ -13,7 +13,6 @@ export const getServerSideProps: GetServerSideProps = async () => {
   const result = await fetch(rootURL + '/api/tasks')
   const tasks = await result.json()
   const output = { props: { tasks } }
-  console.log(output)
   return output
 }
 

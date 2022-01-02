@@ -9,21 +9,25 @@ import {
   Col,
   Grid,
 } from '@mantine/core'
-import TaskData from '../interfaces/taskData'
+import TaskData from '../interfaces/TaskData'
+import { useRouter } from 'next/router'
+import { rootURL } from '../utils/constants'
 
 interface TaskPreviewProps {
+  id: number
   title: string
   description?: string
   creationTime: Date
 }
 
 export const TaskPreview = ({
+  id,
   title,
   description,
   creationTime,
 }: TaskPreviewProps) => {
   const theme = useMantineTheme()
-
+  const { push } = useRouter()
   const secondaryColor =
     theme.colorScheme === 'dark' ? theme.colors.dark[1] : theme.colors.gray[7]
 
@@ -50,6 +54,7 @@ export const TaskPreview = ({
           color="blue"
           fullWidth
           style={{ marginTop: 14 }}
+          onClick={() => push(rootURL + 'tasks/' + id.toString())}
         >
           Details
         </Button>
@@ -74,6 +79,7 @@ const TasksList = ({ data }: TasksListProps) => {
         }) => (
           <Col span={4} key={id}>
             <TaskPreview
+              id={id}
               title={title}
               description={description}
               creationTime={creationTime}

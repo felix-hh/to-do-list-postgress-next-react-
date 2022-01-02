@@ -6,6 +6,7 @@ import {
   Group,
   Button,
   Container,
+  Space,
 } from '@mantine/core'
 import { useRouter } from 'next/router'
 import { FileTextIcon } from '@radix-ui/react-icons'
@@ -22,7 +23,7 @@ const Layout = (props: LayoutProps) => {
     <AppShell
       padding="md"
       header={
-        <Header height={60} padding="xs" dir="">
+        <Header height={75} padding="xs" dir="">
           <Group position="apart">
             <Group
               onClick={() => router.push('/')}

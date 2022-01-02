@@ -1,6 +1,6 @@
 import { NextApiRequest, NextApiResponse } from 'next/types'
 import connection from '../../../utils/database'
-import TaskData from 'src/interfaces/taskData'
+import TaskData from 'src/interfaces/TaskData'
 
 // eslint-disable-next-line import/no-anonymous-default-export
 export default async (
